@@ -1,0 +1,40 @@
+name: Coolify
+version: "4.0.0"
+slug: coolify
+description: Self-hosting with superpowers. Deploy your applications, databases, and services with ease.
+url: https://github.com/SankeerthBoddu/coolify-hass-addon
+arch:
+  - aarch64
+  - amd64
+startup: application
+boot: auto
+init: false
+host_network: true
+ports:
+  8000/tcp: 8000
+  6001/tcp: 6001
+  6002/tcp: 6002
+ports_description:
+  8000/tcp: Coolify Web UI
+  6001/tcp: Coolify Websocket
+  6002/tcp: Coolify Terminal
+map:
+  - share:rw
+  - ssl:ro
+options:
+  APP_URL: http://homeassistant.local:8000
+  APP_KEY: ""
+  PUSHER_APP_ID: coolify
+  PUSHER_APP_KEY: ""
+  PUSHER_APP_SECRET: ""
+schema:
+  APP_URL: url
+  APP_KEY: str?
+  PUSHER_APP_ID: str
+  PUSHER_APP_KEY: str?
+  PUSHER_APP_SECRET: str?
+privileged: true
+full_access: true
+docker_api: true
+hassio_api: true
+apparmor: false
