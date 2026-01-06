@@ -9,5 +9,5 @@ LABEL \
     io.hass.name="Coolify" \
     io.hass.description="Self-hosting with superpowers" \
     io.hass.arch="aarch64|amd64" \
-    io.hass.type="addon"
+    io.hass.type="addon" \
     io.hass.version="4.0.0"
