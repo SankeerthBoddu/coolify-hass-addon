@@ -33,7 +33,15 @@ schema:
   PUSHER_APP_ID: str
   PUSHER_APP_KEY: str?
   PUSHER_APP_SECRET: str?
-privileged: true
+privileged:
+  - NET_ADMIN
+  - SYS_ADMIN
+  - SYS_RAWIO
+  - SYS_TIME
+  - SYS_NICE
+  - SYS_RESOURCE
+  - SYS_PTRACE
+  - DAC_READ_SEARCH
 full_access: true
 docker_api: true
 hassio_api: true
